@@ -34,7 +34,7 @@ namespace AsyncDemo
                 // -----------------------------------
                 // Build a list of Tasks, not integers
 
-                res.Add(SlowMethAsync(datum));
+                res.Add(SlowMethodAsync(datum));
             }
 
             // ----------------------------------------
@@ -52,7 +52,7 @@ namespace AsyncDemo
         // This is awaited within the first async method.
         // So, it must be async as well.
 
-        public async Task<int> SlowMethAsync(int sec)
+        public async Task<int> SlowMethodAsync(int sec)
         {
             var retVal = 0;
 
