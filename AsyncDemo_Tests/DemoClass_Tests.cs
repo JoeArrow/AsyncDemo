@@ -29,7 +29,7 @@ namespace AsyncDemo_Tests
         [DataRow("[5, 3, 5]")]
         [DataRow("[5, 3, 5, 4]")]
         [DataRow("[5, 3, 5, 4, 9, 7]")]
-        [DataRow("[15, 13, 15, 14, 20, 17]")]
+        [DataRow("[5, 3, 5, 4, 12, 7]")]
         public void RunDemo_DemoClass(string dataJson)
         {
             // -------
