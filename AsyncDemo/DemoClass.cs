@@ -27,20 +27,20 @@ namespace AsyncDemo
             // ------------------------------------------
             // List of Tasks, so that each can be awaited
 
-            var res = new List<Task<int>>();
+            var results = new List<Task<int>>();
 
             foreach(var datum in data)
             {
                 // -----------------------------------
                 // Build a list of Tasks, not integers
 
-                res.Add(SlowMethodAsync(datum));
+                results.Add(SlowMethodAsync(datum));
             }
 
             // ----------------------------------------
             // Await all of the Tasks added to our list
 
-            foreach(var task in await Task.WhenAll(res))
+            foreach(var task in await Task.WhenAll(results))
             {
                 retVal += task;
             }
